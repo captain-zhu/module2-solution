@@ -22,7 +22,7 @@
     vm.items = ShoppingListCheckOffService.getAlreadyBuyItems();
   };
 
-  function ShoppingListCheckOffService() {
+  ShoppingListCheckOffService = function () {
     var service = this;
 
     service.toBuyArray = [{
