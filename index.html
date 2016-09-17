@@ -33,7 +33,7 @@
     <!-- To Buy List -->
     <div class="col-md-6" ng-controller="ToBuyShoppingController as TBS">
      <h2>To Buy:</h2>
-     <ul ng-repeat="item as items">
+     <ul ng-repeat="item in items">
        <li>Buy {{ item.quantity }} {{ item.name}}<button class="btn btn-default"><span class="glyphicon glyphicon-ok"></span> Bought</button></li>
      </ul>
      <div class="emptyMessage">Everything is bought!</div>
@@ -42,7 +42,7 @@
     <!-- Already Bought List -->
     <div class="col-md-6" ng-controller="AlreadyBoughtShoppingController as ABS">
      <h2>Already Bought:</h2>
-     <ul ng-repeat="item as items">
+     <ul ng-repeat="item in items">
        <li>Bought {{ item.quantity }} {{ item.name}}</li>
      </ul>
      <div class="emptyMessage" ng-if="items.length == 0">Nothing bought yet.</div>
