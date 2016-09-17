@@ -15,7 +15,6 @@
 
     vm.buy = function(index) {
       ShoppingListCheckOffService.buy(index);
-      console.log(ShoppingListCheckOffService.getAlreadyBuyItems());
     };
   };
 
@@ -59,7 +58,7 @@
 
     service.buy = function (index) {
       var item = service.toBuyArray.splice(index, 1);
-      service.alreadyBuyArray = service.alreadyBuyArray.concat(item);
+      service.alreadyBuyArray.push(item[0]);
     };
   };
 })();
