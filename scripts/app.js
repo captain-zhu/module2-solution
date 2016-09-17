@@ -58,9 +58,7 @@
 
     service.buy = function (index) {
       var item = service.toBuyArray.splice(index, 1);
-      console.log(item);
       service.alreadyBuyArray = service.alreadyBuyArray.concat(item);
-      console.log(service.alreadyBuyArray);
-    }
-  }
+    };
+  };
 })();
