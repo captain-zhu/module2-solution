@@ -23,6 +23,7 @@
     var vm = this;
 
     vm.items = ShoppingListCheckOffService.getAlreadyBuyItems();
+
   };
 
    function ShoppingListCheckOffService() {
@@ -58,6 +59,7 @@
     service.buy = function (index) {
       var item = service.toBuyArray.splice(index, 1);
       service.alreadyBuyArray.push(item);
+      console.log(service.alreadyBuyArray);
     }
   }
 })();
