@@ -11,8 +11,11 @@
     var vm = this;
 
     vm.items = ShoppingListCheckOffService.getToBuyItems();
+    console.log(vm.items);
 
-    vm.buy = ShoppingListCheckOffService.buy();
+    vm.buy = function(index) {
+      ShoppingListCheckOffService.buy(index);
+    };
   };
 
   AlreadyBoughtShoppingController.$inject = ['ShoppingListCheckOffService'];
@@ -41,6 +44,7 @@
       name: "cookies",
       quantity: 6
     }];
+     
     service.alreadyBuyArray = [];
 
     service.getToBuyItems = function () {
@@ -53,7 +57,6 @@
 
     service.buy = function (index) {
       var item = service.toBuyArray.splice(index, 1);
-      console.log("buy item: " + item);
       service.alreadyBuyArray.push(item);
     }
   }
