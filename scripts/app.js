@@ -15,6 +15,7 @@
 
     vm.buy = function(index) {
       ShoppingListCheckOffService.buy(index);
+      console.log(ShoppingListCheckOffService.getAlreadyBuyItems());
     };
   };
 
